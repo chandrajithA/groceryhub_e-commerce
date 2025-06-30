@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryHub - Shopping Website</title>
+    <link rel="icon" href="images/Ellipse 1.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="body">
+    
+    <header >
+
+        <div class="header1" id="header">
+
+            <div class="contactarea">
+                <img src="images/phone.png" alt="">
+                <span>+91 96748 585687</span>
+                <img src="images/whatsapp.png" alt="">
+                <span>+91 85789 57748</span>
+            </div>
+
+            <div class="description_area">
+                <span id="description_text" class="description_text">World Fastest Online Shopping Destination</span>
+            </div>
+
+            <div class="userinfoarea" id="userinfoarea">
+                
+                <div class="currentlocation" id="currentlocation">
+                    <span>Current Location</span>
+                    <img src="images/down_arrow.png" alt="">
+                </div>
+
+                <div class="account" id="account">
+                    <span>Account</span>
+                    <img src="images/down_arrow.png" alt="">
+                </div>
+
+                <div class="loginarea" id="loginarea">
+                    <img src="images/usericon.png" alt="">
+                    <span>Login/Logout</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="header2" class="header2">
+
+            <div class="logoarea" id="logoarea">
+                <img src="images/Ellipse 1.png" id="logoimg" class="logoimg" alt="Logo image">
+                <span class="logolabel" id="logolabel">Grocery Hub</span>
+            </div>
+
+            <nav id="mainnavlinks" class="mainnavlinks">
+                <div class="navlinks " id="homepagelink">
+                    <a href="home.html">Home</a>
+                </div>
+                <div class="navlinks active" id="categoriespagelink">
+                    <a href="products.html">Products</a>  
+                </div>
+                <!-- <div class="navlinks " id="dealspagelink">
+                    <a href="deals.html">Deals</a> 
+                </div> -->
+             
+            </nav>
+
+            <div class="functionbtnarea" id="functionbtnarea">
+                
+                <div class="searcharea">
+                    <input type="text" id="searchbar" class="searchbar" placeholder="Search..." >
+                    <img src="images/SEARCH.png" id="searchicon" class="searchicon" alt="search the items icon">
+                    
+                </div>
+
+                <div class="cartbtn" id="cartbtn">
+                    <img src="images/Vector 8.png" id="carticon" class="carticon" alt="cart items section icon">
+                    <span class="cartitemcount" id="cartitemcount"></span>
+                    <span id="cartbtntext" class="cartbtntext">Cart</span>
+                </div>
+
+                <div class="wishlistbtn" id="wishlistbtn">
+                    <img src="images/Vector O.png" id="wishlisticon" class="wishlisticon" alt="liked items section icon">
+                    <span class="wishitemcount" id="wishitemcount"></span>
+                    <span id="wishlistbtntext" class="wishlistbtntext">Liked</span>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+        
+    <main>
+      <div class="categorygridcontainer">
+
+        <div class="categorynamelistarea">
+
+          <div><strong>Categories</strong></div><hr>
+          <div class="categorylistbox" id="categorylistbox">
+
+            <!-- products generate dynamically -->
+            
+          </div>
+        </div>
+
+        <div class="productpagemainarea">
+
+            <div class="filterandsortconditionarea">
+              <div>
+                  <span id="filtercondtionname" class="filtercondtionname">All products</span>
+                  <button class="clearfilterbtn" onclick="clearfilterproducts()">Clear Filter</button>
+              </div> 
+
+              <div>
+                  <div class="custom-dropdown">
+                    <div class="selected-option">
+                      <span id="sortingoptiontextarea">Recommended</span>
+                      <img src="images/downarrow-black.png">
+                    </div>
+                    <ul class="dropdown-options">
+                      <li value="recommended">Recommended</li>
+                      <li value="pricebyasc">Price - Low to High</li>
+                      <li value="pricebydes">Price - High to Low</li>
+                      <li value="dispricebyasc">Offer - Low to High</li>
+                      <li value="dispricebydes">Offer - High to Low</li>
+                    </ul>
+                  
+                  </div>
+              </div>
+
+            </div>
+            
+            <div class="individualproductdisplayarea" id="individualproductdisplayarea">
+
+                <!-- all products are generated dynamically here based on filter and sorting-->
+
+            </div>
+            
+            
+        </div>
+
+      </div>
+       
+
+
+        
+
+        
+    </main>
+
+     <footer>
+
+        <p>Copyright &copy; 2025 CroceryHub. All rights reserved and maintained by Chandrajith.</p>
+        
+    </footer>
+
+    <script src="websitescript.js"></script>
+    <script>
+
+            const dropdown = document.querySelector('.custom-dropdown');
+            const selected = dropdown.querySelector('.selected-option');
+            const sortingoptiontextarea = document.getElementById("sortingoptiontextarea");
+            const options = dropdown.querySelectorAll('.dropdown-options li');
+
+            // Toggle dropdown
+            selected.addEventListener('click', () => {
+              dropdown.classList.toggle('open');
+            });
+
+            // Handle option selection
+            options.forEach(option => {
+              option.addEventListener('click', () => {
+                sortingoptiontextarea.textContent = option.textContent;
+                dropdown.classList.remove('open');
+
+                const value = option.getAttribute('value');
+                sessionStorage.setItem("sortbycondition",value)
+                showproductinproductpage();
+                
+              });
+            });
+
+
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+              }
+            });
+
+
+            const cartbtn = document.getElementById("cartbtn");  
+            const wishlistbtn = document.getElementById("wishlistbtn"); 
+            const logoarea = document.getElementById("logoarea");
+
+            cartbtn.addEventListener('click',()=>{
+                window.location.href="cartpage.html"
+            })
+
+
+             
+            wishlistbtn.addEventListener('click',()=>{
+                window.location.href="wishlist.html";
+            })
+
+            logoarea.addEventListener('click',()=>{
+                window.location.href="home.html";
+            })
+
+            
+    
+        categorynavbar();
+        showproductinproductpage();
+        updatecartcount();
+        updatewishlistcount();
+
+        
+
+
+</script>
+</body>
+</html>

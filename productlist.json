@@ -1,0 +1,366 @@
+[
+    {
+        "name":"Veg Onion Premium","price":48.50,"quantity":"1Kg","discount":37,"image":"image/onion.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Vegetables","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Onion can fill your kitchen with a thick spicy aroma. It is a common base vegetable in most Indian dishes, thanks to the wonderful flavor that it adds to any dish. Onions are high in sulphur, Vitamin B6 and B9. It has high quantities of water and naturally low in fat. It is high in phytochemical compounds.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Veg Tomato Country","price":45,"quantity":"1 Kg","discount":17,"image":"image/tomato.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Vegetables","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Banganapalli are sourced from Andhra Pradesh and known for their unique sweet and rich taste. They are moderately juicy and aromatic with a maize yellow colour. Mangoes are known to contain more than 20 different Vitamins and Minerals, which make them a super food. Laden with the goodness of Vitamin C and A, Mangoes also have a high fibre content. The Mangoes are also rich in Minerals like iron, folate, magnesium. A cup of Mango is around 100 calories and adds the perfect dietary balance to your meal. These Mangoes can either be eaten on their own or puree to make juices and shakes. They make a perfect dessert as they can be sliced and served with icecreams and a variety of other desserts too. These Mangoes can be added to salads to give it a nice texture and flavour.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Veg Drumstick","price":75.50,"quantity":"500 gm","discount":20,"image":"image/drumstick.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Vegetables","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Drumsticks have long, dark green bumpy pods running along the length and fleshy pulp inside the pod encasing each seed. These pods have a faint bitter taste combined with slight sweetness. Drumsticks are rich in antioxidants that reduce the risk of heart diseases and type 2 diabetes. They are also a rich source of Vitamin B, C and iron that reduces inflammation and are good for skin, teeth and bones.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Veg Broad Beans","price":32.25,"quantity":"1 Kg","discount":20,"image":"image/broadbeans.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Vegetables","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Broad Beans are very delicious and also used in daily diet program.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Apple Royal Gala","price":340,"quantity":"1 Kg","discount":26,"image":"image/apple.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Fruits","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Apple Royal gala are one of the healthiest fruits. They are rich in vitamin c and dietary fiber which keep our digestive and immune system healthy. Protects from alzheimers, type 2 diabetes and cancer. Its a natural teeth whitener and prevent bad breath.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Banana Green","price":20,"quantity":"500 gm","discount":20,"image":"image/banana.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Fruits","category-image":"image/Fruits and vegetables.jpg",
+        "description":"With fairly large insize and a bright, glossy, yellow colour, bananas have a powdery flesh that is highly fragrant and tasty. One banana supplies 30 percent of the daily vitamin b6 requirement and is rich in vitamin c and potassium. It aids in reducing the appetite and promotes weight loss. They also boost the immune system and keep bones strong. They are very good for pregnant women and athletes.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Grapes Red Globe Indian","price":270,"quantity":"500 gm","discount":20,"image":"image/grapes.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Fruits","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Grapes has been used as a beauty product for thousands of years, so it's no surprise that it can improve your complexion and reduce skin redness. Grapes are a good source of fiber, potassium, and a range of vitamins and other minerals.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented. "
+    },
+
+    {
+        "name":"Strawberry Box","price":205,"quantity":"1 Pack","discount":20,"image":"image/strawberry.jpg","availablestock":5,
+        "category":"Fruits and Vegetables","sub-category":"Fruits","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Strawberries are very rich in antioxidants and plant compounds, which may have benefits for heart health and blood sugar control. Usually consumed raw and fresh, these berries can also be used in a variety of jams, jellies, and desserts.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Udhaiyam Urad Dhal","price":151,"quantity":"1 Kg","discount":3,"image":"image/uraddhal.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Cereals & Dals","category-image":"image/staples.jpg",
+        "description":"The fresher the packed urad, the higher the ubari. Desi urad, being fresher than stored imported urad, gives higher ubari. Higher ubari while making idli batter leads to fluffier idlis.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"India Gate Basmathi Rice Dubar","price":151,"quantity":"1 Kg","discount":4,"image":"image/basmathirice.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Cereals & Dals","category-image":"image/staples.jpg",
+        "description":"India Gate Basmathi Rice Dubar brings to you natures priceless gift, original basmati rice in an affordable price. Dubar is half of the full basmati grain and belongs to the ever popular super/pusa grains. Its delightful taste and captivating aroma will make your every meal a delicacy.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Aachi Turmeric Powder","price":21,"quantity":"50 gm","discount":10,"image":"image/turmericpowder.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Cereals & Dals","category-image":"image/staples.jpg",
+        "description":"Aachi Turmeric Powder adds colour and makes the Indian cuisines a delectable one. Only the best turmeric is procured to prepare this spice, so that it does not lose its natural quality. The vibrant yellow colour and the flavour of the turmeric proves its good quality.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Sakthi Chicken Masala","price":26,"quantity":"50 gm","discount":5,"image":"image/chickenmasala.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Masalas & Spices","category-image":"image/staples.jpg",
+        "description":"Sakthi Chicken Masala is a unique combination of pure and fresh spices. It is rich in taste and aroma. You can also use this masala to marinate chicken. Sakthi, founded in 1975, manufactures varieties of spice and masala powders, pickles, flour varieties, appalams, ghee and sunflower oil.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Tata Salt Powder","price":30,"quantity":"1 Kg","discount":3,"image":"image/tatasalt.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Salt & Sugar","category-image":"image/staples.jpg",
+        "description":"Tata Salt Powder Enjoy a fresh burst of flavour in every meal with salt. Rich in natural trace Minerals like potassium, Calcium and Magnesium, it provides necessary nourishment for you and your family.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Pear Green Howell","price":154,"quantity":"500 gm","discount":20,"image":"image/greenhowell.jpg","availablestock":3,
+        "category":"Fruits and Vegetables","sub-category":"Fruits","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Pear Green Howell is one of the many varieties of pears. Described as having a teardrop shape - a bulbous fruit with a narrow neck,",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Kiwi","price":153,"quantity":"3 Pcs","discount":20,"image":"image/kiwi.jpg","availablestock":4,
+        "category":"Fruits and Vegetables","sub-category":"Fruits","category-image":"image/Fruits and vegetables.jpg",
+        "description":"Kiwi Fruit is a nutritious and delicious. Kiwi fruit thats full bodied, full of health and full of flavor and with its vibrant green flesh, distinctive sweet and sour taste and renowned digestive benefits, it is a nutritional power house with delicious taste. Kiwi fruit is simply bursting with Vitamin C, fibre and antioxidants.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Parrys Pure Refined Sugar Cubes","price":65,"quantity":"500 gm","discount":3,"image":"image/sugar.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Salt & Sugar","category-image":"image/staples.jpg",
+        "description":"When the soluble and sweetened carbohydrate called raw sugar is dissolved, treated and finally separated from its brown origins, the white substance you get is refined sugar. Parrys refined sugar is a form of processed sugar that has been through the rigours of the above process in a high quality procedure supervised by experts.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Aashirvaad Atta","price":70,"quantity":"1 Kg","discount":3,"image":"image/atta.jpg","availablestock":5,
+        "category":"Staples","sub-category":"Flours","category-image":"image/staples.jpg",
+        "description":"Aashirvaad select whole wheat atta is made from 100 percent naturally growned wheat. Here the golden fields are sun kissed to perfection and showered by the right amount of rain. This is why each grain has a golden sheen and is heavier in feel. Aashirvaad select whole wheat atta is prepared to give you the finest, softest and fluffiest rotis you have ever tasted. The best of nature with every bite.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Milky Mist Cooking Butter Unsalted","price":75,"quantity":"100 gm","discount":2,"image":"image/butter.jpg","availablestock":5,
+        "category":"Chilled & Dairy Foods","sub-category":"Butter & Cheese","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Milky Mist, a name associated with dairy products, introduces cooking butter that has a shelf life of 6 months. Cooking butter is a pure milk product. Milky Mist butter salted its rich and creamy and its sublime flavour enhances the taste of food. When Milky Mist cooking butter is used for vegetables, it enhances the flavours and gives you the delicious taste that you have never experienced before. Milky Mist butter salted is used for every preparation in the cuisines that includes everything from sauce making to baking.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Amul Cheese Slices","price":145,"quantity":"200 gm","discount":2,"image":"image/cheese.jpg","availablestock":5,
+        "category":"Chilled & Dairy Foods","sub-category":"Butter & Cheese","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Amul Cheese Slices are popular cheese for snacking on its own as chiplets and slices. Good source of Calcium and milk Proteins. Processed cheese can be added to omelettes, pizza, souffles and many more. ",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Milky Mist Paneer","price":128,"quantity":"200 gm","discount":10,"image":"image/paneer.jpg","availablestock":5,
+        "category":"Chilled & Dairy Foods","sub-category":"Paneer","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Milky Mist brand, known for its dairy products, is highly pure and hygienic. Milky Mist cottage cheese paneer is a soft and tasty paneer which is available in three variants low fat, regular, and malai. Cottage cheese known as paneer in India, adds a different taste and appearance to your dish, enhancing it to be mouth watering. It has Calcium and Vitamins which are good for healthy bones, skin, tissue growth and eyesight. It is just perfect for curries and tikka recipes.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Amul Taaza Milk","price":16.25,"quantity":"200 ml","discount":"","image":"image/milk.jpg","availablestock":5,
+        "category":"Chilled & Dairy Foods","sub-category":"Milk & Curd","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Amul milk is the most hygenic liquid milk available in the market. It is pasteurised in state-of-the-art processing plants and pouch-packed to make it conveniently available to consumers.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Milky Mist Curd Cup","price":30,"quantity":"200 mg","discount":"2","image":"image/curd.jpg","availablestock":5,
+        "category":"Chilled & Dairy Foods","sub-category":"Milk & Curd","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Milky Mist farm fresh, curd taste the deliciousness of Milky Mist curd. Milky Mist, a name associated with high quality dairy products, has introduced Milky Mist curd, a pasteurized wholesome dairy product. The curd is a high quality source of Calcium and Proteins. It renders a lip smacking flavor to paranthas, rotis and rice. The 100 percent pure milk product, Milky Mistcurd improves the digestion, Boost s immunity and is a great substitute of milk. It is made from the high quality and graded cow or buffalo milk and the shelf life of the product is about 15 days.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Kwality Walls Butterscotch Cup","price":30,"quantity":"90 ml","discount":"5","image":"image/icecream.jpg","availablestock":5,
+        "category":"Chilled & Dairy Foods","sub-category":"Ice Creams","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Kwality Walls Butterscotch colourful ice Cream with its scrumptious and unique Butterscotch flavours is sure to add different shades of dynamism to the lives of many children. The magic you taste in every scoop of Kwality Walls comes from many years of experience in the fine art of frozen desserts.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Amul Premium Pizza","price":125,"quantity":"220 gm","discount":"2","image":"image/pizza.jpg","availablestock":7,
+        "category":"Chilled & Dairy Foods","sub-category":"Frozen Foods","category-image":"image/chilled and dairy foods.jpg",
+        "description":"Amul Pizza Mozarella Cheese is made from the following Ingredients: Milk, Common Salt, 100% Vegetarian Coagulating Enzymes.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Sumeru Aloo Paratha","price":169,"quantity":"400 gm","discount":"5","image":"image/paratha.jpg","availablestock":7,
+        "category":"Chilled & Dairy Foods","sub-category":"Frozen Foods","category-image":"image/chilled and dairy foods.jpg",
+        "description":"The Parathas can go straight onto a pre-heated tawa and it has to be cooked on a simmered flame for 3 minutes (flipping it every 30 seconds). The delicious Parathas are ready to eat when they’re golden brown in colour. The Parathas can also be cooked by placing them in a pre-heated oven at 180 degrees for 7 minutes approximately.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Sunfeast Dark Fantasy Chocolate Biscuit","price":35,"quantity":"100 gm","discount":50,"image":"image/darkfantasy.jpg","availablestock":7,
+        "category":"Snacks & Namkeens","sub-category":"Buscuits & Cookies","category-image":"image/snacks and namkeems.jpg",
+        "description":"Alluring, dark and tempting-dark fantasy choco creme is one of our finest offerings. We suggest you try one to experience the savoury crust crumble, unfurling the pleasure of heavenly chocolate creme within. Take that irresistible bite escape into one.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Kinder Joy","price":50,"quantity":"20 gm","discount":3,"image":"image/kinderjoy.jpg","availablestock":7,
+        "category":"Snacks & Namkeens","sub-category":"Chocolates & Candies","category-image":"image/snacks and namkeems.jpg",
+        "description":"Kinder Joy Girls chocolates are most loved by kid as they provide kids two things in one package: a delicious chocolate and a smart game to play with. Buy this for your little bundle of joy and bring a cute smile on his/her face. Kinder joy chocolates are most loved by kid as they provide kids two things in one package: a delicious chocolate and a smart game to play with.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Kitkat Share Bag Chocolate Covered Wafer","price":25,"quantity":"37.3 gm","discount":3,"image":"image/kitkatbag.jpg","availablestock":7,
+        "category":"Snacks & Namkeens","sub-category":"Chocolates & Candies","category-image":"image/snacks and namkeems.jpg",
+        "description":"Nestle Kitkat Chocolate cover Wafer Fingers is the ideal snack for those who really value their break. It's the ideal treat when you're enjoying a break, alone or with friends.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Cavins Milkshake Strawberry","price":35,"quantity":"180 ml","discount":5,"image":"image/milkshake.jpg","availablestock":3,
+        "category":"Beverages","sub-category":"Drinkes and Juices","category-image":"image/beverages.jpg",
+        "description":"Cavins milk shake offers a refreshing feel to the body during the scorching heat or while you are working. Made of the strawberry flavours, Cavins milk shake is a favourite drink among the kids, youngsters and adults too. Enjoy the delicious taste of milk shake strawberry flavour from the house of Cavin.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Maaza Original Mango Drink","price":42,"quantity":"600 ml","discount":3,"image":"image/maaza.jpg","availablestock":3,
+        "category":"Beverages","sub-category":"Drinkes and Juices","category-image":"image/beverages.jpg",
+        "description":"It wouldn't be far from the truth if you said Maaza is synonymous with mangoes. We Indians love our mangoes. So much so that during mango season, you'll see mangoes getting over by the crates. But what about off season. What do we do then. Maaza brings the goodness of mangoes to everyone throughout the year, even if it's not mango season.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Nescafe Sunrise Premium Pouch","price":10,"quantity":"8.5 gm","discount":"","image":"image/sunrise.jpg","availablestock":3,
+        "category":"Beverages","sub-category":"Tea & Coffee","category-image":"image/beverages.jpg",
+        "description":"A fine blend of coffee and chicory, expertly granulated to capture the rich aroma inside every aroma granule to give a captivating coffee experience that would leave you asking for more. Our commitment to quality goes well beyond the product. We help coffee farmers and are always looking to go beyond the cup.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Boost 3X More Stamina Jar","price":124,"quantity":"200 gm","discount":2,"image":"image/boost.jpg","availablestock":3,
+        "category":"Beverages","sub-category":"Health Drinks","category-image":"image/beverages.jpg",
+        "description":"Boost is India's only HFD scientifically proven to give three times more stamina. Boost gives you three times more stamina, it helps you get ready to play the bigger game. Enjoyed by your favourite cricket superstars all over India, delicious chocolate Boost drink can be prepared with hot or cold milk, and is fortified with 17 essential vitamins and minerals to help unleash the winner in you.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Johnson's Baby Powder Blossoms","price":240,"quantity":"200 gm","discount":2,"image":"image/babypowder.jpg","availablestock":3,
+        "category":"Baby Care","sub-category":"Baby Accessories","category-image":"image/baby care.jpg",
+        "description":"Johnson's Baby Powder Blossoms is dermatologically and allergy tested, keeping in mind your baby's delicate skin. It keeps your baby's skin dry and fresh. It is clinically proven to be gentle on your baby's skin. Johnson and Johnson company operates in over 60 countries. It offers a wide range of personal care and Health care products.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"MamyPoko Pants Standard Small 4-8 Kg","price":99,"quantity":"11 pants","discount":4,"image":"image/diaper.jpg","availablestock":3,
+        "category":"Baby Care","sub-category":"Diapers & Wipes","category-image":"image/baby care.jpg",
+        "description":"MamyPoko Pants Standard Small 4 to 8 Kg comes with new crisscross absorbent sheet which spreads urine equally and lasts for up to 10 hours and is easy to wear and remove pant style diapers.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Sakthi Lemon Rice Powder","price":21,"quantity":"50 gm","discount":10,"image":"image/lemonricepowder.jpg","availablestock":4,
+        "category":"Ready To Cook","sub-category":"Instant Mixes","category-image":"image/ready to cook.jpg",
+        "description":"Cook up your lemon rice in minutes with Sakthi lemon rice powder. This ready to use lemon rice powder is prepared from quality ingredients to give your lemon rice the authentic taste. Sakthi lemon rice powder is an offering from from Sakthi masala private limited that has been providing convenient and easy cooking to Indian households for several decades.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Maggi 2 Minute Noodles","price":57,"quantity":"180 gm","discount":2,"image":"image/maggi.jpg","availablestock":4,
+        "category":"Ready To Cook","sub-category":"Noodles","category-image":"image/ready to cook.jpg",
+        "description":"Maggi Noodles cooks in just 2 minutes and is perfect for satiating untimely hunger pangs. It has a delicious taste which is enhanced with a mix of Indian spices. To enjoy this scrumptious noodle, all you need to do is put the noodle and the taste maker in boiling water and let it cook on simmer for just about two minutes. It can be served hot with tomato ketchup or otherwise too.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"GRB Gulab Jamun Mix","price":145,"quantity":"175 gm","discount":26,"image":"image/gulabjamun.jpg","availablestock":4,
+        "category":"Ready To Cook","sub-category":"Instant Mixes","category-image":"image/ready to cook.jpg",
+        "description":"GRB Gulab Jamun Mix gives delicious Gulab Jamun which is an favourite Indian dessert, which is popular with everyone young and old. This recipe is a melt in the mouth dessert and the right mixture to end a costly meal. It is a sweet dumpling prepared of khova, deep fried and supplied in sugar syrup.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Knorr Sweet Corn Veg Soup","price":65,"quantity":"44 gm","discount":4,"image":"image/soup.jpg","availablestock":4,
+        "category":"Ready To Cook","sub-category":"Soups","category-image":"image/ready to cook.jpg",
+        "description":"Knorr Sweet Corn Veg Cup-A-Soup is a perfect blend of corn, carrots, cabbage that makes this cup-a-soup an instant hit. Knorr Cup-a-Soup satisfies your small hunger pangs in just 1 minute.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Aachi Mango Ginger Pickle","price":89,"quantity":"200 gm","discount":4,"image":"image/pickle.jpg","availablestock":4,
+        "category":"Ready To Eat","sub-category":"Pickles","category-image":"image/ready to eat.jpg",
+        "description":"Aachi Mango Ginger Pickle is oil free and is made by carefully chosen ingredients that bring forth the authentic taste of India. It enhances tastes of the food. ",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Kissan Mixed Fruit Jam Tub","price":25,"quantity":"100 gm","discount":2,"image":"image/jam.jpg","availablestock":4,
+        "category":"Ready To Eat","sub-category":"Jam & Spreads","category-image":"image/ready to eat.jpg",
+        "description":"Kissan Mixed Fruit Jam has a flavorsome appeal with its fresh, delicious mixed fruits. Its smooth texture is easy to spread and goes well with a number of food items.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Haiku Milk Bread","price":50,"quantity":"350 gm","discount":11,"image":"image/bread.jpg","availablestock":4,
+        "category":"Ready To Eat","sub-category":"Instant Foods","category-image":"image/ready to eat.jpg",
+        "description":"Haiku Milk Breadis baked twice to give it crispiness. It is a popular companion with your Tea/coffee. Finest ingredients are used to make it extra crispy, tasty and healthy.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Kelloggs Corn Flakes Original","price":60,"quantity":"100 gm","discount":3,"image":"image/cornflakes.jpg","availablestock":4,
+        "category":"Ready To Eat","sub-category":"Breakfast Cereals","category-image":"image/ready to eat.jpg",
+        "description":"Corn flakes is one of the healthiest breakfast, as it is rich with the essential ingredients and a high nutritional value.Kellogg's Corn Flakes Original & The Best Breakfast Cereals, is enriched with Iron, Vitamin B and C. It doesn't contain any cholesterol or preservatives.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Harpic Power Blue Original","price":46,"quantity":"200 ml","discount":1,"image":"image/harpic.jpg","availablestock":4,
+        "category":"Cleaning Needs","sub-category":"Floor & Toilet Cleaners","category-image":"image/cleaning needs.jpg",
+        "description":"Harpic Power Blue Original",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Vim Drop Dishwash Gel Pouch Lemon","price":20,"quantity":"140 ml","discount":"","image":"image/dishwashgel.jpg","availablestock":5,
+        "category":"Cleaning Needs","sub-category":"Dishwasah Cleaner","category-image":"image/cleaning needs.jpg",
+        "description":"Vim Drop Dishwash Gel Lemon, which helps clean dishes easily. Unlike dishwash bars, Vim gel leaves no white residue and leaves your utensils sparkling clean. Vim gel is so strong that only 1 spoonfull cleans an entire sinkfull of dirty utensils.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Godrej Fab Liquid Detergen Pouch","price":325,"quantity":"3.2 ltr","discount":7,"image":"image/detergentliquid.jpg","availablestock":4,
+        "category":"Cleaning Needs","sub-category":"Detergents","category-image":"image/cleaning needs.jpg",
+        "description":"Godrej Fab Liquid Detergent 1l Pouch",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Veet Hair Removal Cream Normal Skin","price":109,"quantity":"35 gm","discount":2,"image":"image/veethairremoval.jpg","availablestock":4,
+        "category":"Feminine Care","sub-category":"Hair Removals","category-image":"image/feminine care.jpg",
+        "description":"Veet Hair Removal Cream Normal Skin 35gms",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Stayfree Secure Dry Wings Regular","price":37,"quantity":"7 Pads","discount":3,"image":"image/stayfree.jpg","availablestock":4,
+        "category":"Feminine Care","sub-category":"Sanitary Napkins","category-image":"image/feminine care.jpg",
+        "description":"Stayfree secure dry wings regular designed with wings, this extra large pad keeps you comfortable and secure for longer so you can move freely and with confidence. It comes with a super absorb design having raised centre with deep channels that give superior protection. Stayfree comes with odour control system that helps prevent the foul odour and keeps you feeling fresh.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Whisper Choice Extra Long Xl","price":42,"quantity":"6 Pads","discount":"","image":"image/whisper.jpg","availablestock":2,
+        "category":"Feminine Care","sub-category":"Sanitary Napkins","category-image":"image/feminine care.jpg",
+        "description":"Be it your clothes, your shoes or even your pad. Whisper choice choice extra long xl understands that perfectly well and has designed the maxi fit range of pads keeping your delicate contours in mind.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"HIT Spray Crawling Insect Killer","price":260,"quantity":"625 ml","discount":3,"image":"image/hit.jpg","availablestock":2,
+        "category":"Household Essentials","sub-category":"Fresheners & Repellents","category-image":"image/household essentials.jpg",
+        "description":"For someone looking to eliminate the menace caused by cockroaches, red hit, with its unique formulation and nozzle design, flushes out the cockroaches & kills them. Red hit has a special seek 'n' kill applicator which delivers the spray to even the remotest cracks and crevices where cockroaches hide.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Bison Garbage Bag Large","price":97,"quantity":"1 No","discount":5,"image":"image/dustbinbag.jpg","availablestock":2,
+        "category":"Household Essentials","sub-category":"Paper Goods & Disposables","category-image":"image/household essentials.jpg",
+        "description":"Bison Garbage Bag Large are very few production costs. Second, using plastic rubbish bags indoors is hygienic and clean.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Duracell Chota Power Battery AAA","price":95,"quantity":"4 Nos","discount":4,"image":"image/duracell.jpg","availablestock":2,
+        "category":"Household Essentials","sub-category":"Basic Electricals","category-image":"image/household essentials.jpg",
+        "description":"This battery is suitable for remotes, flashlights, and toys. Our respected clients can avail this battery from us at affordable rates in a given time frame.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    },
+
+    {
+        "name":"Good Knight Gold Flash Liquid","price":82.45,"quantity":"45 ml","discount":3,"image":"image/goodnight.jpg","availablestock":2,
+        "category":"Household Essentials","sub-category":"Fresheners & Repellents","category-image":"image/household essentials.jpg",
+        "description":"A mosquito's irritating bites can ruin almost any occasion. Its not just about the nuisance they cause, mosquitoes are also carriers of some of the most deadly diseases. Hence, getting rid of them should be a priority. Protect your families happy moments with the most innovative mosquito repellents from the house of Good Knight.",
+        "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."
+    }
+    
+]

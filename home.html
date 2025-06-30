@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryHub - Shopping Website</title>
+    <link rel="icon" href="images/Ellipse 1.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body class="body">
+    
+    <header>
+
+        <div class="header1" id="header1">
+
+            <div class="contactarea">
+                <img src="images/phone.png" alt="">
+                <span>+91 96748 585687</span>
+                <img src="images/whatsapp.png" alt="">
+                <span>+91 85789 57748</span>
+            </div>
+
+            <div class="description_area">
+                <span id="description_text" class="description_text">World Fastest Online Shopping Destination</span>
+            </div>
+
+            <div class="userinfoarea" id="userinfoarea">
+                
+                <div class="currentlocation" id="currentlocation">
+                    <span>Current Location</span>
+                    <img src="images/down_arrow.png" alt="">
+                </div>
+
+                <div class="account" id="account">
+                    <span>Account</span>
+                    <img src="images/down_arrow.png" alt="">
+                </div>
+
+                <div class="loginarea" id="loginarea">
+                    <img src="images/usericon.png" alt="">
+                    <span>Login/Logout</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="header2" class="header2">
+
+            <div class="logoarea" id="logoarea">
+                <img src="images/Ellipse 1.png" id="logoimg" class="logoimg" alt="Logo image">
+                <span class="logolabel" id="logolabel">Grocery Hub</span>
+            </div>
+
+            <nav id="mainnavlinks" class="mainnavlinks">
+                <div class="navlinks active" id="homepagelink">
+                    <a href="home.html">Home</a>
+                </div>
+                <div class="navlinks" id="categoriespagelink">
+                    <a href="products.html">Products</a>  
+                </div>
+                <!-- <div class="navlinks" id="dealspagelink">
+                    <a href="deals.html">Deals</a> 
+                </div> -->
+             
+            </nav>
+
+            <div class="functionbtnarea" id="functionbtnarea">
+                
+                <div class="searcharea">
+                    <input type="text" id="searchbar" class="searchbar" placeholder="Search..." >
+                    <img src="images/SEARCH.png" id="searchicon" class="searchicon" alt="search the items icon">
+                    
+                </div>
+
+                <div class="cartbtn" id="cartbtn">
+                    <img src="images/Vector 8.png" id="carticon" class="carticon" alt="cart items section icon">
+                    <span class="cartitemcount" id="cartitemcount"></span>
+                    <span id="cartbtntext" class="cartbtntext">Cart</span>
+                </div>
+
+                <div class="wishlistbtn" id="wishlistbtn">
+                    <img src="images/Vector O.png" id="wishlisticon" class="wishlisticon" alt="liked items section icon">
+                    <span class="wishitemcount" id="wishitemcount"></span>
+                    <span id="wishlistbtntext" class="wishlistbtntext">Liked</span>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+        
+    <main>
+
+        <div class="herogrid" id="herogrid">
+            <div class="herotextarea">
+                <h1>Fresh Groceries Delivered To Your DoorStep</h1>
+                <h3>Emphasizing the store's commitment to providing fresh produce and products daily.</h3>
+                <a href="products.html">Shop Now</a>
+            </div>
+            <div class="heropicture">
+                <img src="images/image 1.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="posterimage1">
+            <img src="images/Link → welcome-image.png" alt="poster image">
+        </div>
+
+        <div class="categorydisplayarea" id="categorydisplayarea">
+            <h3 class="categoryareatitle">Shop By Category</h3>
+
+            <div class="productcategories" id="productcategories">
+                
+            </div>
+
+        </div>
+
+        <div class="singlecategorydisplayarea" >
+            <h3 class="categoryareatitle">Instant Foods</h3>
+            <button onclick="scrollCarousel('slider1','left')" class="productleftscrollbtn" id="slider1leftscrollbtn">←</button>
+
+            <div class="singlecategories" id="slider1">
+                <div class="slider" id="quickpurchase1">
+                        
+
+                        
+                </div>
+            </div>
+            <button onclick="scrollCarousel('slider1','right')" class="productrightscrollbtn" id="slider1rightscrollbtn">→</button>
+            <button onclick="displayproductbycategory('Ready To Eat','')" class="seeallcategoryitemsbtn" id="slider1seeallcategoryitemsbtn">See All ></button>
+        </div>
+
+        <div class="singlecategorydisplayarea"  >
+            <h3 class="categoryareatitle">Diary Foods</h3>
+            <button onclick="scrollCarousel('slider2','left')" class="productleftscrollbtn" id="slider2leftscrollbtn">←</button>
+
+            <div class="singlecategories" id="slider2">
+                <div class="slider" id="quickpurchase2">
+                        
+
+                        
+                </div>
+            </div>
+            <button onclick="scrollCarousel('slider2','right')" class="productrightscrollbtn" id="slider2rightscrollbtn">→</button>
+            <button onclick="displayproductbycategory('Chilled & Dairy Foods','')" class="seeallcategoryitemsbtn" id="slider2seeallcategoryitemsbtn">See All ></button>
+        </div>
+
+        <div class="singlecategorydisplayarea"  >
+            <h3 class="categoryareatitle">Cereals & Masalas</h3>
+            <button onclick="scrollCarousel('slider3','left')" class="productleftscrollbtn" id="slider3leftscrollbtn">←</button>
+
+            <div class="singlecategories" id="slider3">
+                <div class="slider" id="quickpurchase3">
+                        
+
+                        
+                </div>
+            </div>
+            <button onclick="scrollCarousel('slider3','right')" class="productrightscrollbtn" id="slider3rightscrollbtn">→</button>
+            <button onclick="displayproductbycategory('Staples','')" class="seeallcategoryitemsbtn" id="slider3seeallcategoryitemsbtn">See All ></button>
+        </div>
+
+        <div class="posterimage2">
+            <img src="images/poster2.jpg" alt="Fruits poster image">
+        </div>
+
+        <div class="singlecategorydisplayarea"  >
+            <h3 class="categoryareatitle">Fruits</h3>
+            <button onclick="scrollCarousel('slider4','left')" class="productleftscrollbtn" id="slider4leftscrollbtn">←</button>
+
+            <div class="singlecategories" id="slider4">
+                <div class="slider" id="quickpurchase4">
+                        
+
+                        
+                </div>
+            </div>
+            <button onclick="scrollCarousel('slider4','right')" class="productrightscrollbtn" id="slider4rightscrollbtn">→</button>
+            <button onclick="displayproductbycategory('Fruits and Vegetables','Fruits')" class="seeallcategoryitemsbtn" id="slider4seeallcategoryitemsbtn">See All ></button>
+        </div>
+       
+
+
+
+    </main>
+
+     <footer>
+
+        <p>Copyright &copy; 2025 CroceryHub. All rights reserved and maintained by Chandrajith.</p>
+        
+    </footer>
+    
+        <script src="websitescript.js"></script>
+        <script> 
+            
+            // color: #8BC34A;  dark green
+            // color: #f7fef0;  light green
+            // color: #595959; grey
+            // color: #000000; black
+            // color: #FFFFFF; white
+
+            
+            
+
+            
+            
+            window.addEventListener("resize", ()=> checkOverflow("slider1"));
+            window.addEventListener("resize", ()=> checkOverflow("slider2"));
+            window.addEventListener("resize", ()=> checkOverflow("slider3"));
+            window.addEventListener("resize", ()=> checkOverflow("slider4"));
+
+            const cartbtn = document.getElementById("cartbtn"); 
+            const wishlistbtn = document.getElementById("wishlistbtn");  
+            const logoarea = document.getElementById("logoarea");
+
+            cartbtn.addEventListener('click',()=>{
+                window.location.href="cartpage.html"
+            })
+
+
+            
+            wishlistbtn.addEventListener('click',()=>{
+                window.location.href="wishlist.html";
+            })
+
+            logoarea.addEventListener('click',()=>{
+                window.location.href="home.html";
+            })
+
+            
+
+             
+            startwebsite();
+            updatecartcount();
+            updatewishlistcount();
+            
+        </script>
+    
+</body>
+</html>
