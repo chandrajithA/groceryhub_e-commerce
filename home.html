@@ -233,6 +233,19 @@
                 window.location.href="home.html";
             })
 
+
+            window.addEventListener("beforeunload", () => {
+                    sessionStorage.setItem("scrollPosition", window.scrollY);
+                });
+
+                // Restore scroll position on reload
+                window.addEventListener("load", () => {
+                    const scrollY = sessionStorage.getItem("scrollPosition");
+                    if (scrollY !== null) {
+                    window.scrollTo(0, parseInt(scrollY));
+                    }
+                });
+
             
 
              

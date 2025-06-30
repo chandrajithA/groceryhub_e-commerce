@@ -212,11 +212,34 @@
             })
 
             
+            window.addEventListener("beforeunload", () => {
+                    sessionStorage.setItem("scrollPosition", window.scrollY);
+                });
+
+                // Restore scroll position on reload
+                window.addEventListener("load", () => {
+                    const scrollY = sessionStorage.getItem("scrollPosition");
+                    if (scrollY !== null) {
+                    window.scrollTo(0, parseInt(scrollY));
+                    }
+                });
+
+
+                window.addEventListener("scroll", () => {
+                lastScroll = window.scrollY;
+                });
+
+                // Use anytime to scroll back
+                function goBackToLastScroll() {
+                window.scrollTo(0, lastScroll);
+                }
+            
     
         categorynavbar();
         showproductinproductpage();
         updatecartcount();
         updatewishlistcount();
+        goBackToLastScroll();
 
         
 

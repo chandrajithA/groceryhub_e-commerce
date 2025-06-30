@@ -605,21 +605,26 @@ function increaseitemcountinproductcard(selecteditemname){
 
                 
 
-        
+      
 
         
         // to display  all products in the product page based on saved category and sub-category and filter condition
     async function showproductinproductpage(){
           let data = await getdata();
+          
           let sortby = sessionStorage.getItem("sortbycondition") || "";
             if(sortby === "pricebyasc"){
                 data.sort((item1, item2) =>  (item1.price - ( (item1.discount/100) * item1.price )) - (item2.price - ( (item2.discount/100) * item2.price )));
+                
             }else if(sortby === "pricebydes"){
                 data.sort((item1, item2) => (item2.price - ( (item2.discount/100) * item2.price )) - (item1.price - ( (item1.discount/100) * item1.price )));
+                
             }else if(sortby === "dispricebyasc"){
                 data.sort((item1, item2) => item1.discount - item2.discount);
+                
             }else if(sortby === "dispricebydes"){
                 data.sort((item1, item2) => item2.discount - item1.discount);
+                
             }
 
 
@@ -630,6 +635,7 @@ function increaseitemcountinproductcard(selecteditemname){
 
             //call function to generate individual products
             displayindividualproduct(data, categoryname, subcategoryname, individualproductdisplayarea, ""); 
+            
         
 
     }
