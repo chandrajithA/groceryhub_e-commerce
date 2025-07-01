@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryHub - Shopping Website</title>
+    <link rel="icon" href="images/Ellipse 1.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    
+    form {
+      max-width: 700px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      margin: 30px auto;
+      
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+    button {
+      margin: 20px 40% 0 40%;
+      padding: 10px 15px;
+      font-size: 1em;
+      color: black;
+      border: 2px solid grey;
+      border-radius: 5px;
+        background-color: #8BC34A;
+        color: #FFFFFF;
+        border: none;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+
+        <div class="header1" id="header1">
+
+            <div class="contactarea">
+                <img src="images/phone.png" alt="">
+                <span>+91 96748 585687</span>
+                <img src="images/whatsapp.png" alt="">
+                <span>+91 85789 57748</span>
+            </div>
+
+            <div class="description_area">
+                <span id="description_text" class="description_text">World Fastest Online Shopping Destination</span>
+            </div>
+
+            <div class="userinfoarea" id="userinfoarea">
+                
+                <div class="currentlocation" id="currentlocation">
+                    <span>Current Location</span>
+                    <img src="images/down_arrow.png" alt="">
+                </div>
+
+                <div class="account" id="account">
+                    <span>Account</span>
+                    <img src="images/down_arrow.png" alt="">
+                </div>
+
+                <div class="loginarea" id="loginarea">
+                    <img src="images/usericon.png" alt="">
+                    <span>Login/Logout</span>
+                </div>
+                
+            </div>
+        </div>
+
+       
+
+    </header>
+
+<h2 style="text-align: center; margin-top: 50px;">Registration Page</h2>
+
+<form id="checkoutForm" novalidate>
+  <label for="name">Full Name</label>
+  <input type="text" id="name" required>
+  <div class="error" id="nameError"></div>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" required>
+  <div class="error" id="emailError"></div>
+
+  <label for="address">Address</label>
+  <input type="text" id="address" required>
+  <div class="error" id="addressError"></div>
+
+  <label for="phone">Phone</label>
+  <input type="tel" id="phone" maxlength="10" required>
+  <div class="error" id="phoneError"></div>
+
+  <!-- <label for="card">Card Number</label>
+  <input type="text" id="card" maxlength="16" required>
+  <div class="error" id="cardError"></div> -->
+
+  <button type="submit">Register</button>
+</form>
+
+<script>
+  document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let isValid = true;
+
+    // Clear all errors
+    document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const card = document.getElementById("card").value.trim();
+
+    if (name === "") {
+      isValid = false;
+      document.getElementById("nameError").textContent = "Name is required.";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      isValid = false;
+      document.getElementById("emailError").textContent = "Invalid email format.";
+    }
+
+    if (address.length < 5) {
+      isValid = false;
+      document.getElementById("addressError").textContent = "Address must be at least 5 characters.";
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      isValid = false;
+      document.getElementById("phoneError").textContent = "Enter a valid 10-digit phone number.";
+    }
+
+    // if (!/^\d{16}$/.test(card)) {
+    //   isValid = false;
+    //   document.getElementById("cardError").textContent = "Card number must be 16 digits.";
+    // }
+
+    if (isValid) {
+      alert("Order submitted successfully!");
+      this.reset();
+    }
+  });
+</script>
+
+</body>
+</html>
