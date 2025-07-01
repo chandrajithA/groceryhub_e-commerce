@@ -10,15 +10,21 @@
 
 
         body{
-            font-size: 1.2em;
             background-color: #f7fef0;
             font-family: DM Sans;
             width: 100vw;
             overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             & a{
                 text-decoration: none;
             }
-            min-height: 100vh;
+            
+        }
+
+        main{
+            flex: 1;
         }
 
 
@@ -29,7 +35,7 @@
         header{
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 2000;
             
             
         }
@@ -626,6 +632,11 @@
             min-width: 250px ;
             border: 0.5px solid rgba(0,0,0,0.2);
             /* height: 420px; */
+            box-shadow: 0 0 5px #ccc;
+            transition: 0.3s;
+            &:hover{
+                scale: 1.01;
+            }
             
 
         }
@@ -1337,7 +1348,7 @@
         text-align: center;
         padding: 15px;
         font-size: 16px;
-        margin-top: 100px;
+        
        } 
 
       

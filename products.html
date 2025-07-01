@@ -42,7 +42,7 @@
 
                 <div class="loginarea" id="loginarea">
                     <img src="images/usericon.png" alt="">
-                    <span>Login/Logout</span>
+                    <span id="loginstatus"></span>
                 </div>
                 
             </div>
@@ -70,11 +70,11 @@
 
             <div class="functionbtnarea" id="functionbtnarea">
                 
-                <div class="searcharea">
+                <!-- <div class="searcharea">
                     <input type="text" id="searchbar" class="searchbar" placeholder="Search..." >
                     <img src="images/SEARCH.png" id="searchicon" class="searchicon" alt="search the items icon">
                     
-                </div>
+                </div> -->
 
                 <div class="cartbtn" id="cartbtn">
                     <img src="images/Vector 8.png" id="carticon" class="carticon" alt="cart items section icon">
@@ -196,6 +196,7 @@
             const cartbtn = document.getElementById("cartbtn");  
             const wishlistbtn = document.getElementById("wishlistbtn"); 
             const logoarea = document.getElementById("logoarea");
+            const userloginstatusdisplayarea = document.getElementById("loginstatus");
 
             cartbtn.addEventListener('click',()=>{
                 window.location.href="cartpage.html"
@@ -211,36 +212,49 @@
                 window.location.href="home.html";
             })
 
+
+
+            document.getElementById("loginarea").addEventListener('click',()=>{
+                    let logincurrentstatus = sessionStorage.getItem("islogin") || "";
+                    if(logincurrentstatus === "" || logincurrentstatus === "logout"){
+                        window.location.href = "login.html";
+                    }else if(logincurrentstatus === "login"){
+                        let logoutconfirm = confirm("Are you sure you want to logout");
+                        if(logoutconfirm){
+                            sessionStorage.setItem("islogin","logout");
+                            updateloginstatus();
+                            alert("Logout successfully");
+                        }
+                    }
+                })
+
+
             
             window.addEventListener("beforeunload", () => {
                     sessionStorage.setItem("scrollPosition", window.scrollY);
                 });
 
+
+
                 // Restore scroll position on reload
                 window.addEventListener("load", () => {
                     const scrollY = sessionStorage.getItem("scrollPosition");
                     if (scrollY !== null) {
-                    window.scrollTo(0, parseInt(scrollY));
+                        setTimeout(() => {
+                            window.scrollTo(0, parseInt(scrollY));
+                        }, 100);
                     }
                 });
 
 
-                window.addEventListener("scroll", () => {
-                lastScroll = window.scrollY;
-                });
-
-                // Use anytime to scroll back
-                function goBackToLastScroll() {
-                window.scrollTo(0, lastScroll);
-                }
+                
             
     
         categorynavbar();
         showproductinproductpage();
         updatecartcount();
         updatewishlistcount();
-        goBackToLastScroll();
-
+        updateloginstatus();
         
 
 

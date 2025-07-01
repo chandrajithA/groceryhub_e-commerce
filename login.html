@@ -11,40 +11,51 @@
     <link rel="stylesheet" href="style.css">
   <style>
     
-    form {
-      max-width: 600px;
+    .login-container {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      margin: 0 auto 40px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+      margin: 50px auto;
       font-size: 16px;
-      
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
     label {
       display: block;
-      margin: 15px 0 5px;
-
+      margin-top: 15px;
     }
     .inputtext {
-      width: 100%;
+      width: 90%;
       padding: 10px;
       margin-top: 5px;
-      border-radius: 5px;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
     .error {
       color: red;
+      margin-top: 5px;
     }
     button {
-      margin: 20px 40% 0 40%;
-      padding: 10px 15px;
-      color: black;
-      border: 2px solid grey;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #8BC34A;
+      border: none;
+      color: white;
+      font-size: 17px;
       border-radius: 5px;
-        background-color: #8BC34A;
-        color: #FFFFFF;
-        border: none;
+      cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(30, 0, 255);
+        text-align: end;
+        display: block;
+        margin: 20px 0 0 0 ;
     }
   </style>
 </head>
@@ -84,6 +95,7 @@
                 
             </div>
         </div>
+
         <div id="header2" class="header2">
 
             <div class="logoarea" id="logoarea">
@@ -126,41 +138,27 @@
                 
             </div>
         </div>
-
-       
+        
 
     </header>
 
 <main>
-  <h2 style="text-align: center; margin-bottom: 20px;">Registration Page</h2>
+                <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm" novalidate>
+                <label for="username">Phone or Email</label>
+                <input type="text" id="username" class="inputtext" required>
+                <div class="error" id="usernameError"></div>
 
-<form id="checkoutForm" novalidate>
-  <label for="name">Full Name</label>
-  <input type="text" id="name" class="inputtext" required>
-  <div class="error" id="nameError"></div>
+                <label for="password">Password</label>
+                <input type="password" id="password" class="inputtext" required>
+                <div class="error" id="passwordError"></div>
+                <a href="registration.html">Click here to Register</a>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" class="inputtext" required>
-  <div class="error" id="emailError"></div>
-
-  <label for="address">Address</label>
-  <input type="text" id="address" class="inputtext" required>
-  <div class="error" id="addressError"></div>
-
-  <label for="phone">Phone</label>
-  <input type="tel" id="phone" maxlength="10" class="inputtext" required>
-  <div class="error" id="phoneError"></div>
-
-  <label for="password">Password</label>
-  <input type="password" id="password" class="inputtext" required>
-  <div class="error" id="passwordError"></div>
-
-  <!-- <label for="card">Card Number</label>
-  <input type="text" id="card" maxlength="16" required>
-  <div class="error" id="cardError"></div> -->
-
-  <button type="submit">Register</button>
-</form>
+                <button type="submit">Login</button>
+                <div class="error" id="loginError"></div>
+            </form>
+            </div>
 </main>
 
 <footer>
@@ -170,63 +168,72 @@
     </footer>
 <script src="websitescript.js"></script>
 <script>
-  document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+
+
+    // document.querySelectorAll("input").addEventListener('input',()=>{
+    //     document.getElementById("usernameError").textContent = "";
+    //     document.getElementById("passwordError").textContent = "";
+    //     document.getElementById("loginError").textContent = "";
+    // })
+
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
+
+    
+
+    // Clear previous errors
+    document.getElementById("usernameError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
 
     let isValid = true;
 
-    // Clear all errors
-    document.querySelectorAll(".error").forEach(e => e.textContent = "");
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const address = document.getElementById("address").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const password = document.getElementById("password").value.trim();
-    // const card = document.getElementById("card").value.trim();
-
-    if (name === "") {
+    if (username === "") {
       isValid = false;
-      document.getElementById("nameError").textContent = "Name is required.";
+      document.getElementById("usernameError").textContent = "Phone Number or email is required.";
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (password === "") {
       isValid = false;
-      document.getElementById("emailError").textContent = "Invalid email format.";
+      document.getElementById("passwordError").textContent = "Password is required..";
     }
-
-    if (address.length < 10) {
-      isValid = false;
-      document.getElementById("addressError").textContent = "Address must be at least 10 characters.";
-    }
-
-    if (!/^\d{10}$/.test(phone)) {
-      isValid = false;
-      document.getElementById("phoneError").textContent = "Enter a valid 10-digit phone number.";
-    }
-
-    if (password.length < 6) {
-      isValid = false;
-      document.getElementById("passwordError").textContent = "password must be at least 6 characters.";
-    }
-
-    // if (!/^\d{16}$/.test(card)) {
-    //   isValid = false;
-    //   document.getElementById("cardError").textContent = "Card number must be 16 digits.";
-    // }
 
     if (isValid) {
-        let userdetail = {"user_name":name,"user_email":email,"user_address":address,"user_phone":phone,"user_password":password}
-        let userdetaillist = JSON.parse(localStorage.getItem("userDetails")) || [];
-        userdetaillist.push(userdetail);
-        localStorage.setItem("userDetails",JSON.stringify(userdetaillist));
-        alert("User Details registered successfully");
-        window.history.back();
+      // For now, simulate login success
+      
+      let userdetails = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+      if(userdetails.length === 0){
+        alert("Please register to login")
+      }
+      
+      userdetails.forEach(users => {
+        if( username === users.user_phone || username === users.user_email ){
+            
+            if(password === users.user_password ){
+                sessionStorage.setItem("islogin","login");
+                alert("Login Successful");
+                window.history.back();
+            }
+            else{
+                document.getElementById("loginError").textContent = "Login Credentials are invalid. If not rigister, please register to login";
+            }
+        }else{
+            document.getElementById("loginError").textContent = "Login Credentials are invalid. If not rigister, please register to login";
+        }
+      });
+      this.reset();
     }
   });
 
 
-  const cartbtn = document.getElementById("cartbtn"); 
+            const cartbtn = document.getElementById("cartbtn"); 
             const wishlistbtn = document.getElementById("wishlistbtn");  
             const logoarea = document.getElementById("logoarea");
             const userloginstatusdisplayarea = document.getElementById("loginstatus");
@@ -246,6 +253,7 @@
             })
 
 
+
             document.getElementById("loginarea").addEventListener('click',()=>{
                     let logincurrentstatus = sessionStorage.getItem("islogin") || "";
                     if(logincurrentstatus === "" || logincurrentstatus === "logout"){
@@ -259,6 +267,8 @@
                         }
                     }
                 })
+
+
 
 
             window.addEventListener("beforeunload", () => {
@@ -275,10 +285,11 @@
                     }
                 });
 
+
+
                 updatecartcount();
                 updatewishlistcount();
                 updateloginstatus();
-
 
 </script>
 

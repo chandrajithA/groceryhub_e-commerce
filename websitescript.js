@@ -903,6 +903,14 @@ function increaseitemcountinproductcard(selecteditemname){
     checkoutBtn.className = "checkoutbtn";
     checkoutBtn.id = "checkoutbtn";
     checkoutBtn.textContent = "Check Out";
+    checkoutBtn.onclick = ()=>{
+        let isloginstatus = sessionStorage.getItem("islogin") || "";
+        if(isloginstatus === "login"){
+            window.location.href = "";
+        }else{
+            window.location.href = "login.html";
+        }
+    }
 
     cartTotalDetails.appendChild(detail1);
     cartTotalDetails.appendChild(detail2);
@@ -1135,6 +1143,19 @@ function increaseitemcount(index){
         wishclearBtn.style.display = "none";
     }
     return wishDisplayArea;
+}
+
+
+
+function updateloginstatus(){
+    
+
+    let logincurrentstatus = sessionStorage.getItem("islogin") || "";
+    if(logincurrentstatus === "login"){
+        userloginstatusdisplayarea.textContent = "Logout";
+    }else if(logincurrentstatus === "logout" || logincurrentstatus === ""){
+        userloginstatusdisplayarea.textContent = "Login";
+    }
 }
 
 
