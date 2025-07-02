@@ -293,8 +293,8 @@
   const total = subtotal + shipping;
 
   document.getElementById("subtotal").textContent = `₹${subtotal.toFixed(2)}`;
-  document.getElementById("total").textContent = `₹${total}`;
-  document.getElementById("payButtonTotal").textContent = total;
+  document.getElementById("total").textContent = `₹${total.toFixed(2)}`;
+  document.getElementById("payButtonTotal").textContent = total.toFixed(2);
 
 
     }
