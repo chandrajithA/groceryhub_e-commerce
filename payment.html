@@ -277,14 +277,15 @@
 
   cartProducts.forEach(item => {
     const row = document.createElement("tr");
-    const itemTotal = (item.price - (item.price * (item.discount / 100) )) * item.purchasecount;
+    const discountprice = (item.price - (item.price * (item.discount / 100) ));
+    const itemTotal = discountprice * item.purchasecount;
     subtotal += itemTotal;
 
     row.innerHTML = `
       <td>${item.name}</td>
       <td>${item.purchasecount}</td>
-      <td>₹${(item.price - (item.price * (item.discount / 100) ))}</td>
-      <td>₹${itemTotal}</td>
+      <td>₹ ${discountprice.toFixed(2)}</td>
+      <td>₹ ${itemTotal.toFixed(2)}</td>
     `;
     orderItemsContainer.appendChild(row);
   });
@@ -333,6 +334,7 @@
     }
 
     if (isValid) {
+      sessionStorage.setItem("paymentcarddetail",cardNumber);
       alert("✅ Payment successful! Order confirmed.");
       this.reset();
       // localStorage.removeItem("cartItems"); // Optional clear

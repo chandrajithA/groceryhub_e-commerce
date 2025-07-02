@@ -613,18 +613,20 @@ function increaseitemcountinproductcard(selecteditemname){
           let data = await getdata();
           
           let sortby = sessionStorage.getItem("sortbycondition") || "";
-            if(sortby === "pricebyasc"){
+            if(sortby === "Price - Low to High"){
                 data.sort((item1, item2) =>  (item1.price - ( (item1.discount/100) * item1.price )) - (item2.price - ( (item2.discount/100) * item2.price )));
                 
-            }else if(sortby === "pricebydes"){
+            }else if(sortby === "Price - High to Low"){
                 data.sort((item1, item2) => (item2.price - ( (item2.discount/100) * item2.price )) - (item1.price - ( (item1.discount/100) * item1.price )));
                 
-            }else if(sortby === "dispricebyasc"){
+            }else if(sortby === "Offer - Low to High"){
                 data.sort((item1, item2) => item1.discount - item2.discount);
                 
-            }else if(sortby === "dispricebydes"){
+            }else if(sortby === "Offer - High to Low"){
                 data.sort((item1, item2) => item2.discount - item1.discount);
                 
+            }else{
+                data;
             }
 
 

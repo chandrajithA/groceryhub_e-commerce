@@ -121,11 +121,11 @@
                       <img src="images/downarrow-black.png">
                     </div>
                     <ul class="dropdown-options">
-                      <li value="recommended">Recommended</li>
-                      <li value="pricebyasc">Price - Low to High</li>
-                      <li value="pricebydes">Price - High to Low</li>
-                      <li value="dispricebyasc">Offer - Low to High</li>
-                      <li value="dispricebydes">Offer - High to Low</li>
+                      <li value="Recommended">Recommended</li>
+                      <li value="Price - Low to High">Price - Low to High</li>
+                      <li value="Price - High to Low">Price - High to Low</li>
+                      <li value="Offer - Low to High">Offer - Low to High</li>
+                      <li value="Offer - High to Low">Offer - High to Low</li>
                     </ul>
                   
                   </div>
@@ -177,7 +177,7 @@
                 dropdown.classList.remove('open');
 
                 const value = option.getAttribute('value');
-                sessionStorage.setItem("sortbycondition",value)
+                sessionStorage.setItem("sortbycondition",value);
                 showproductinproductpage();
                 
               });
@@ -241,7 +241,7 @@
                 window.addEventListener("load", () => {
                     const savedPage = sessionStorage.getItem("scrollPage");
                     const savedScrollY = sessionStorage.getItem("scrollPosition");
-
+                    sortingoptiontextarea.textContent = sessionStorage.getItem("sortbycondition") || "Recommended";
                     if (savedPage === window.location.pathname && savedScrollY !== null) {
                         setTimeout(() => {
                         window.scrollTo(0, parseInt(savedScrollY));
