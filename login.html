@@ -214,10 +214,11 @@
       }
       
       userdetails.forEach(users => {
-        if( username === users.user_phone || username === users.user_email ){
+        if( username === users.userphone || username === users.useremail ){
             
-            if(password === users.user_password ){
+            if(password === users.userpassword ){
                 sessionStorage.setItem("islogin","login");
+                sessionStorage.setItem("e_com-user",username);
                 alert("Login Successful");
                 window.history.back();
             }
@@ -262,6 +263,8 @@
                         let logoutconfirm = confirm("Are you sure you want to logout");
                         if(logoutconfirm){
                             sessionStorage.setItem("islogin","logout");
+                            sessionStorage.removeItem("e_com-user");
+                            sessionStorage.removeItem("e_com-shipaddress");
                             updateloginstatus();
                             alert("Logout successfully");
                         }
@@ -273,14 +276,17 @@
 
             window.addEventListener("beforeunload", () => {
                     sessionStorage.setItem("scrollPosition", window.scrollY);
+                    sessionStorage.setItem("scrollPage", window.location.pathname);
                 });
 
                 // Restore scroll position on reload
                 window.addEventListener("load", () => {
-                    const scrollY = sessionStorage.getItem("scrollPosition");
-                    if (scrollY !== null) {
+                    const savedPage = sessionStorage.getItem("scrollPage");
+                    const savedScrollY = sessionStorage.getItem("scrollPosition");
+
+                    if (savedPage === window.location.pathname && savedScrollY !== null) {
                         setTimeout(() => {
-                            window.scrollTo(0, parseInt(scrollY));
+                        window.scrollTo(0, parseInt(savedScrollY));
                         }, 100);
                     }
                 });

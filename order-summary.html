@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GroceryHub - Shopping Website</title>
     <link rel="icon" href="images/Ellipse 1.png" type="image/png">
@@ -9,16 +9,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-
-
-
-
-    </script>
-</head>
-<body class="body">
+  <style>
     
-    <header >
+    .container {
+      max-width: 900px;
+      margin: 10px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .summary-section {
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .summary-footer {
+      margin-top: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .summary-footer1 {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      
+      margin-top: 25px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #8BC34A;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
 
         <div class="header1" id="header1">
 
@@ -61,7 +108,7 @@
             </div>
 
             <nav id="mainnavlinks" class="mainnavlinks">
-                <div class="navlinks active" id="homepagelink">
+                <div class="navlinks" id="homepagelink">
                     <a href="home.html">Home</a>
                 </div>
                 <div class="navlinks" id="categoriespagelink">
@@ -96,26 +143,149 @@
             </div>
         </div>
 
-    </header>
+</header>
 
-    <main>
+<main>
 
+<div class="container" id="summaryContainer">
+  <h2>Order Summary</h2>
 
-    </main>
+  <div class="summary-section" id="userDetails">
+    <!-- User info will go here -->
+  </div>
 
-     <footer>
+  <div class="summary-section" id="orderID">
+    <!-- Order ID will appear here -->
+  </div>
 
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="summary-footer1">
+    
+    <span>Sub Total:</span>
+    <span id="subtotalamount">₹0.00</span>
+  </div>
+
+  <div class="summary-footer1">
+    
+    <span>Delivery Charges:</span>
+    <span >₹50.00</span>
+  </div>
+
+  <div class="summary-footer">
+    
+    <span>Total:</span>
+    <span id="totalAmount">₹0</span>
+  </div>
+
+  <div style="display: flex;justify-content: space-between;">
+   
+    <button onclick="downloadPDF()">Download PDF</button>
+     <button onclick="continueShopping()">Continue shopping</button>
+  </div>
+</div>
+
+</main>
+
+<footer>
+
+        <p>Copyright &copy; 2025 CroceryHub. All rights reserved and maintained by Chandrajith.</p>
         
     </footer>
+<script src="websitescript.js"></script>
+<script>
+  
 
+  // Sample data
+  const cartItems = JSON.parse(localStorage.getItem("cartitems")) 
+
+
+  const userInfoskipRaw = sessionStorage.getItem("e_com-shipaddress");
+  const userInfo = userInfoskipRaw !== "skip" ? JSON.parse(userInfoskipRaw) : "skip";
+
+  const userreginfolist = JSON.parse(localStorage.getItem("userDetails"));
+  const currentusernumber = JSON.parse(sessionStorage.getItem("e_com-user"));
+  let userreginfo =  userreginfolist.filter(users => users.userphone == currentusernumber);
+   const matchedUser = userreginfo[0];
     
-    <script src="websitescript.js"></script>
-     <script>
-        
-        const cartbtn = document.getElementById("cartbtn");  
-        const wishlistbtn = document.getElementById("wishlistbtn"); 
-        const logoarea = document.getElementById("logoarea"); 
-        const userloginstatusdisplayarea = document.getElementById("loginstatus");
+    
+
+  const userDiv = document.getElementById("userDetails");
+
+  if(userInfo && typeof userInfo === "object" && Object.keys(userInfo).length > 0){
+    
+    userDiv.innerHTML = `
+      <strong>Name:</strong> ${userInfo.name} <br>
+      <strong>Address:</strong> ${userInfo.address} <br>
+      <strong>City:</strong> ${userInfo.city} <br>
+      <strong>Pincode:</strong> ${userInfo.pincode} <br>
+      <strong>Phone:</strong> ${userInfo.phone}
+    `;
+   
+  }else if(userInfoskipRaw  === "skip" && matchedUser){
+    
+    userDiv.innerHTML = `
+      <strong>Name:</strong> ${matchedUser.username} <br>
+      <strong>Address:</strong> ${matchedUser.useraddress} <br>
+      <strong>City:</strong> ${matchedUser.usercity} <br>
+      <strong>Pincode:</strong> ${matchedUser.userpincode} <br>
+      <strong>Phone:</strong> ${matchedUser.userphone}
+    `;
+  }
+
+  const orderId = "ORD" + Math.floor(Math.random() * 1000000);
+
+  
+
+  // Fill in order ID
+  document.getElementById("orderID").innerHTML = `<strong>Order ID:</strong> ${orderId}`;
+
+  // Fill in products
+  const tbody = document.querySelector("#productTable tbody");
+  let total = 0;
+
+  cartItems.forEach(item => {
+    const price = item.price - (item.price * item.discount / 100);
+    const subtotal = price * item.purchasecount;
+    total += subtotal;
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td style="text-align: center;">${item.purchasecount}</td>
+      <td style="text-align: center;">₹${price}</td>
+      <td style="text-align: center;">₹${subtotal}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+
+  
+  document.getElementById("subtotalamount").textContent = `₹${total.toFixed(2)}`;
+  document.getElementById("totalAmount").textContent = `₹${total+50}`;
+  
+
+  function continueShopping(){
+    localStorage.removeItem("cartitems");
+    sessionStorage.removeItem("e_com-shipaddress");
+    window.location.href = "home.html"
+  }
+
+
+  const userloginstatusdisplayarea = document.getElementById("loginstatus");
+            const cartbtn = document.getElementById("cartbtn"); 
+            const wishlistbtn = document.getElementById("wishlistbtn");  
+            const logoarea = document.getElementById("logoarea");
 
             cartbtn.addEventListener('click',()=>{
                 window.location.href="cartpage.html"
@@ -132,7 +302,8 @@
             })
 
 
-            document.getElementById("loginarea").addEventListener('click',()=>{
+
+                document.getElementById("loginarea").addEventListener('click',()=>{
                     let logincurrentstatus = sessionStorage.getItem("islogin") || "";
                     if(logincurrentstatus === "" || logincurrentstatus === "logout"){
                         window.location.href = "login.html";
@@ -148,10 +319,10 @@
                     }
                 })
 
-                
 
 
-           window.addEventListener("beforeunload", () => {
+
+                window.addEventListener("beforeunload", () => {
                     sessionStorage.setItem("scrollPosition", window.scrollY);
                     sessionStorage.setItem("scrollPage", window.location.pathname);
                 });
@@ -168,14 +339,11 @@
                     }
                 });
 
-
-
-            updatecartcount();
+                updatecartcount();
             updatewishlistcount();
             updateloginstatus();
 
-     </script>
+</script>
 
-    
 </body>
 </html>

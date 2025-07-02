@@ -903,10 +903,11 @@ function increaseitemcountinproductcard(selecteditemname){
     checkoutBtn.className = "checkoutbtn";
     checkoutBtn.id = "checkoutbtn";
     checkoutBtn.textContent = "Check Out";
+    checkoutBtn.style.cursor = "pointer";
     checkoutBtn.onclick = ()=>{
         let isloginstatus = sessionStorage.getItem("islogin") || "";
         if(isloginstatus === "login"){
-            window.location.href = "";
+            window.location.href = "shippingaddress.html";
         }else{
             window.location.href = "login.html";
         }

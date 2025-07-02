@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GroceryHub - Shopping Website</title>
     <link rel="icon" href="images/Ellipse 1.png" type="image/png">
@@ -9,11 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<style>
     
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin:  10px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .buttonArea{
+        margin-top: 20px; 
+        display: flex; 
+        justify-content: space-between;
+    }
+
     
+
+    button {
+         
+        padding: 10px 20px; font-size: 16px;
+        border: none; background: #8BC34A;
+        color: #fff; cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    input { 
+        width: 100%; 
+        padding: 10px; 
+        margin: 10px 0; 
+    }
+
+    h2 { 
+    margin-bottom: 15px; 
+    }
+
+    .error {
+      color: red;
+    }
+
+  </style>
 </head>
-<body class="body">
-    
+<body>
+
     <header>
 
         <div class="header1" id="header1">
@@ -43,7 +83,7 @@
 
                 <div class="loginarea" id="loginarea">
                     <img src="images/usericon.png" alt="">
-                    <span id="loginstatus">Login</span>
+                    <span id="loginstatus"></span>
                 </div>
                 
             </div>
@@ -57,7 +97,7 @@
             </div>
 
             <nav id="mainnavlinks" class="mainnavlinks">
-                <div class="navlinks active" id="homepagelink">
+                <div class="navlinks" id="homepagelink">
                     <a href="home.html">Home</a>
                 </div>
                 <div class="navlinks" id="categoriespagelink">
@@ -93,127 +133,59 @@
         </div>
 
     </header>
+
+<main>
+    <div class="container">
+  
+    
+    <div class="step active">
+      <h2>Shipping Address</h2>
+
+      <form id="checkoutForm" novalidate>
+        <input type="text" id="name" class="inputtext" placeholder="Full Name" required>
+        <div class="error" id="nameError"></div>
+
         
-    <main>
+        <input type="tel" id="phone" maxlength="10" class="inputtext" placeholder="Phone" required>
+        <div class="error" id="phoneError"></div>
 
-        <div class="herogrid" id="herogrid">
-            <div class="herotextarea">
-                <h1>Fresh Groceries Delivered To Your DoorStep</h1>
-                <h3>Emphasizing the store's commitment to providing fresh produce and products daily.</h3>
-                <a href="products.html">Shop Now</a>
-            </div>
-            <div class="heropicture">
-                <img src="images/image 1.png" alt="">
-            </div>
+        
+        <input type="text" id="address" class="inputtext" placeholder="Address" required>
+        <div class="error" id="addressError"></div>
+
+        
+        <input type="text" id="city" class="inputtext" placeholder="City" required>
+        <div class="error" id="cityError"></div>
+
+        
+        <input type="tel" id="pincode" maxlength="6" class="inputtext" placeholder="Pincode" required>
+        <div class="error" id="pincodeError"></div>
+        <div class="buttonArea">
+            <button type="button"  onclick="navigateToPayment()">Use Billing Address</button>
+             <button type="submit"  onclick="validateForm(event)">Next</button>
         </div>
+        
+        </form> 
+    </div>
 
+    
+    
+    
+      
+    
+  
+</div>
+</main>
 
-        <div class="posterimage1">
-            <img src="images/Link → welcome-image.png" alt="poster image">
-        </div>
-
-        <div class="categorydisplayarea" id="categorydisplayarea">
-            <h3 class="categoryareatitle">Shop By Category</h3>
-
-            <div class="productcategories" id="productcategories">
-                
-            </div>
-
-        </div>
-
-        <div class="singlecategorydisplayarea" >
-            <h3 class="categoryareatitle">Instant Foods</h3>
-            <button onclick="scrollCarousel('slider1','left')" class="productleftscrollbtn" id="slider1leftscrollbtn">←</button>
-
-            <div class="singlecategories" id="slider1">
-                <div class="slider" id="quickpurchase1">
-                        
-
-                        
-                </div>
-            </div>
-            <button onclick="scrollCarousel('slider1','right')" class="productrightscrollbtn" id="slider1rightscrollbtn">→</button>
-            <button onclick="displayproductbycategory('Ready To Eat','')" class="seeallcategoryitemsbtn" id="slider1seeallcategoryitemsbtn">See All ></button>
-        </div>
-
-        <div class="singlecategorydisplayarea"  >
-            <h3 class="categoryareatitle">Diary Foods</h3>
-            <button onclick="scrollCarousel('slider2','left')" class="productleftscrollbtn" id="slider2leftscrollbtn">←</button>
-
-            <div class="singlecategories" id="slider2">
-                <div class="slider" id="quickpurchase2">
-                        
-
-                        
-                </div>
-            </div>
-            <button onclick="scrollCarousel('slider2','right')" class="productrightscrollbtn" id="slider2rightscrollbtn">→</button>
-            <button onclick="displayproductbycategory('Chilled & Dairy Foods','')" class="seeallcategoryitemsbtn" id="slider2seeallcategoryitemsbtn">See All ></button>
-        </div>
-
-        <div class="singlecategorydisplayarea"  >
-            <h3 class="categoryareatitle">Cereals & Masalas</h3>
-            <button onclick="scrollCarousel('slider3','left')" class="productleftscrollbtn" id="slider3leftscrollbtn">←</button>
-
-            <div class="singlecategories" id="slider3">
-                <div class="slider" id="quickpurchase3">
-                        
-
-                        
-                </div>
-            </div>
-            <button onclick="scrollCarousel('slider3','right')" class="productrightscrollbtn" id="slider3rightscrollbtn">→</button>
-            <button onclick="displayproductbycategory('Staples','')" class="seeallcategoryitemsbtn" id="slider3seeallcategoryitemsbtn">See All ></button>
-        </div>
-
-        <div class="posterimage2">
-            <img src="images/poster2.jpg" alt="Fruits poster image">
-        </div>
-
-        <div class="singlecategorydisplayarea"  >
-            <h3 class="categoryareatitle">Fruits</h3>
-            <button onclick="scrollCarousel('slider4','left')" class="productleftscrollbtn" id="slider4leftscrollbtn">←</button>
-
-            <div class="singlecategories" id="slider4">
-                <div class="slider" id="quickpurchase4">
-                        
-
-                        
-                </div>
-            </div>
-            <button onclick="scrollCarousel('slider4','right')" class="productrightscrollbtn" id="slider4rightscrollbtn">→</button>
-            <button onclick="displayproductbycategory('Fruits and Vegetables','Fruits')" class="seeallcategoryitemsbtn" id="slider4seeallcategoryitemsbtn">See All ></button>
-        </div>
-       
-
-
-
-    </main>
-
-     <footer>
+<footer>
 
         <p>Copyright &copy; 2025 CroceryHub. All rights reserved and maintained by Chandrajith.</p>
         
     </footer>
-    
-        <script src="websitescript.js"></script>
-        <script> 
-            
-            // color: #8BC34A;  dark green
-            // color: #f7fef0;  light green
-            // color: #595959; grey
-            // color: #000000; black
-            // color: #FFFFFF; white
 
-            
-            
+<script src="websitescript.js"></script>
+<script>
 
-            
-            
-            window.addEventListener("resize", ()=> checkOverflow("slider1"));
-            window.addEventListener("resize", ()=> checkOverflow("slider2"));
-            window.addEventListener("resize", ()=> checkOverflow("slider3"));
-            window.addEventListener("resize", ()=> checkOverflow("slider4"));
 
 
             const userloginstatusdisplayarea = document.getElementById("loginstatus");
@@ -255,6 +227,105 @@
 
 
 
+                function navigateToPayment(){
+                    
+                    sessionStorage.setItem("e_com-shipaddress","skip");
+                    window.location.href="payment.html";
+                    document.querySelectorAll("input").forEach(input => input.value = "");
+                }
+
+                    
+                
+
+
+
+
+  
+
+
+
+
+
+
+  function validateForm(event) {
+   event.preventDefault();
+
+    let isValid = true;
+
+    // Clear all errors
+    document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const pincode = document.getElementById("pincode").value.trim();
+    
+    
+   
+    
+
+    if (name === "") {
+      isValid = false;
+      document.getElementById("nameError").textContent = "Name is required.";
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      isValid = false;
+      document.getElementById("phoneError").textContent = "Enter a valid 10-digit phone number.";
+    }
+
+    if (address.length < 10) {
+      isValid = false;
+      document.getElementById("addressError").textContent = "Address must be at least 10 characters.";
+    }
+
+    if (city === "") {
+      isValid = false;
+      document.getElementById("cityError").textContent = "City is required.";
+    }
+
+    if (!/^\d{6}$/.test(pincode)) {
+      isValid = false;
+      document.getElementById("pincodeError").textContent = "Enter a valid 6-digit pin code.";
+    }
+
+    // const card = document.getElementById("card").value.trim();
+    // const expire = document.getElementById("expire").value.trim();
+    // const cvv = document.getElementById("cvv").value.trim();
+
+    // if (!/^\d{16}$/.test(card)) {
+    //   isValid = false;
+    //   document.getElementById("cardError").textContent = "Enter a valid 16-digit Card Number.";
+    // }
+
+    // if (!/^\d{4}$/.test(expire)) {
+    //   isValid = false;
+    //   document.getElementById("expireError").textContent = "Enter a valid expire month and year as MMYY.";
+    // }
+
+    // if (!/^\d{3}$/.test(cvv)) {
+    //   isValid = false;
+    //   document.getElementById("cvvError").textContent = "Enter a valid 3-digit CVV.";
+    // }
+
+
+    if(isValid){
+        let shippingaddress = {"name":name,"phone":phone,"address":address,"city":city,"pincode":pincode}
+        sessionStorage.setItem("e_com-shipaddress",JSON.stringify(shippingaddress));
+        window.location.href = "payment.html";
+    }
+        
+  }
+
+
+
+
+  
+
+
+
 
                 window.addEventListener("beforeunload", () => {
                     sessionStorage.setItem("scrollPosition", window.scrollY);
@@ -273,15 +344,36 @@
                     }
                 });
 
-            
 
-             
-            startwebsite();
+
+                    
+                // Restore scroll position on reload
+                window.addEventListener("beforeunload", () => {
+                    sessionStorage.setItem("scrollPosition", window.scrollY);
+                    sessionStorage.setItem("scrollPage", window.location.pathname);
+                });
+
+                // Restore scroll position on reload
+                window.addEventListener("load", () => {
+                    const savedPage = sessionStorage.getItem("scrollPage");
+                    const savedScrollY = sessionStorage.getItem("scrollPosition");
+                   
+                    
+                    document.querySelectorAll("input").forEach(input => input.value = "");
+                    
+               
+                    if (savedPage === window.location.pathname && savedScrollY !== null) {
+                        setTimeout(() => {
+                        window.scrollTo(0, parseInt(savedScrollY));
+                        }, 100);
+                    }
+                });
+
+
             updatecartcount();
             updatewishlistcount();
             updateloginstatus();
-            
-        </script>
-    
+</script>
+
 </body>
 </html>
