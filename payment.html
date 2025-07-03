@@ -229,7 +229,12 @@
 <script src="websitescript.js"></script>
 <script>
 
-  const cartProducts = JSON.parse(localStorage.getItem("cartitems"));
+  const cartProducts = JSON.parse(localStorage.getItem("cartitems")) ;
+
+  if(cartProducts === null){
+    // window.location.href = "shippingaddress.html";
+     window.location.replace("cartpage.html");
+  }
   
     function loadpaymentpage(){
 
@@ -293,7 +298,12 @@
     orderItemsContainer.appendChild(row);
   });
 
+  // if(subtotal === 0){
+  //   windon.location.href = "home.html";
+  // }
+
   const shipping = 50;
+  
   const total = subtotal + shipping;
 
   document.getElementById("subtotal").textContent = `₹${subtotal.toFixed(2)}`;
@@ -338,13 +348,43 @@
 
     if (isValid) {
       sessionStorage.setItem("paymentcarddetail",cardNumber);
-      alert("✅ Payment successful! Order confirmed.");
-      this.reset();
-      sessionStorage.setItem("purchaseitemdetails",JSON.stringify(cartProducts));
-      localStorage.removeItem("cartitems"); 
-      window.location.href = "order-summary.html"
-    }
-  });
+
+      const orderId = "ORD" + Math.floor(Math.random() * 1000000);
+
+
+          const date = new Date();
+
+          const orderedtime =
+          `${date.getDate().toString().padStart(2, '0')}/` +
+          `${(date.getMonth() + 1).toString().padStart(2, '0')}/` +
+          `${date.getFullYear()} ` +
+          `${date.getHours().toString().padStart(2, '0')}:` +
+          `${date.getMinutes().toString().padStart(2, '0')}`;
+
+
+          date.setMinutes(date.getMinutes() + 15);
+
+        // Format updated date
+        const estimateddeliverytime =
+          `${date.getDate().toString().padStart(2, '0')}/` +
+          `${(date.getMonth() + 1).toString().padStart(2, '0')}/` +
+          `${date.getFullYear()} ` +
+          `${date.getHours().toString().padStart(2, '0')}:` +
+          `${date.getMinutes().toString().padStart(2, '0')}`;
+
+
+          sessionStorage.setItem("orderId",orderId);
+          sessionStorage.setItem("orderedtime",orderedtime);
+          sessionStorage.setItem("estimateddeliverytime",estimateddeliverytime);
+
+
+              alert("✅ Payment successful! Order confirmed.");
+              this.reset();
+              sessionStorage.setItem("purchaseitemdetails",JSON.stringify(cartProducts));
+              localStorage.removeItem("cartitems"); 
+              window.location.href = "order-summary.html"
+            }
+          });
 
 
   const userloginstatusdisplayarea = document.getElementById("loginstatus");

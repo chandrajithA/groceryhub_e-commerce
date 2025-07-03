@@ -186,7 +186,12 @@
 <script src="websitescript.js"></script>
 <script>
 
+            const cartProducts = JSON.parse(localStorage.getItem("cartitems")) ;
 
+            if(cartProducts === null){
+                // window.location.href = "cartpage.html";
+                 window.location.replace("cartpage.html");
+            }
 
             const userloginstatusdisplayarea = document.getElementById("loginstatus");
             const cartbtn = document.getElementById("cartbtn"); 

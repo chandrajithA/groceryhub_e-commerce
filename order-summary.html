@@ -207,10 +207,17 @@
     </footer>
 <script src="websitescript.js"></script>
 <script>
+
+  
   
 
   // Sample data
   const cartItems = JSON.parse(sessionStorage.getItem("purchaseitemdetails")) 
+
+  if(cartItems === null){
+    // window.location.href = "cartpage.html";
+    window.location.replace("cartpage.html");
+  }
 
 
   const userInfoskipRaw = sessionStorage.getItem("e_com-shipaddress");
@@ -252,31 +259,9 @@
     `;
   }
 
-  const orderId = "ORD" + Math.floor(Math.random() * 1000000);
-
-
-  const date = new Date();
-
-  const orderedtime =
-  `${date.getDate().toString().padStart(2, '0')}/` +
-  `${(date.getMonth() + 1).toString().padStart(2, '0')}/` +
-  `${date.getFullYear()} ` +
-  `${date.getHours().toString().padStart(2, '0')}:` +
-  `${date.getMinutes().toString().padStart(2, '0')}:` +
-  `${date.getSeconds().toString().padStart(2, '0')}`;
-
-
-  date.setMinutes(date.getMinutes() + 20);
-
-// Format updated date
-const estimateddeliverytime =
-  `${date.getDate().toString().padStart(2, '0')}/` +
-  `${(date.getMonth() + 1).toString().padStart(2, '0')}/` +
-  `${date.getFullYear()} ` +
-  `${date.getHours().toString().padStart(2, '0')}:` +
-  `${date.getMinutes().toString().padStart(2, '0')}:` +
-  `${date.getSeconds().toString().padStart(2, '0')}`;
-  
+    let orderId = sessionStorage.getItem("orderId");
+    let orderedtime = sessionStorage.getItem("orderedtime");
+     let estimateddeliverytime = sessionStorage.getItem("estimateddeliverytime");
 
   // Fill in order ID
   document.getElementById("orderID").innerHTML = `
@@ -410,6 +395,9 @@ const estimateddeliverytime =
 
     });
   });
+
+
+  
 
                 updatecartcount();
             updatewishlistcount();
