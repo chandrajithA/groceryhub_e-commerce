@@ -199,6 +199,16 @@ function displayindividualproduct(data, categoryname,subcategoryname, displayare
                         btnarea.appendChild(purchasebtnarea);
 
 
+                    }else if(item.availablestock === 0) {
+
+                        // Not in cart: show "Add to Cart" button
+                        const btn = document.createElement("span");
+                        btn.className = "addtocartbtn";
+                        btn.id = `cartitem${item.name}soldoutbtn`;
+                        btn.innerHTML = "Out of Stock";
+                        btn.style.cursor = "default";
+                        btn.style.backgroundColor = "lightgrey"
+                        btnarea.appendChild(btn);
                     } else {
 
                         // Not in cart: show "Add to Cart" button

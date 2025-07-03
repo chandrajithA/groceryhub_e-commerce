@@ -1,6 +1,6 @@
 [
     {
-        "name":"Veg Onion Premium","price":48.50,"quantity":"1Kg","discount":37,"image":"image/onion.jpg","availablestock":5,
+        "name":"Veg Onion Premium","price":48.50,"quantity":"1Kg","discount":37,"image":"image/onion.jpg","availablestock":0,
         "category":"Fruits and Vegetables","sub-category":"Vegetables","category-image":"image/Fruits and vegetables.jpg",
         "description":"Onion can fill your kitchen with a thick spicy aroma. It is a common base vegetable in most Indian dishes, thanks to the wonderful flavor that it adds to any dish. Onions are high in sulphur, Vitamin B6 and B9. It has high quantities of water and naturally low in fat. It is high in phytochemical compounds.",
         "Disclaimer":"Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented."

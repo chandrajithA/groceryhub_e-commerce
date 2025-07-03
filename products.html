@@ -94,60 +94,65 @@
     </header>
         
     <main>
-      <div class="categorygridcontainer">
+        <div class="categorygridcontainer">
 
-        <div class="categorynamelistarea">
+            <div class="categorynamelistarea">
 
-          <div><strong>Categories</strong></div><hr>
-          <div class="categorylistbox" id="categorylistbox">
+                <div><strong>Categories</strong></div><hr>
+                
+                <div class="categorylistbox" id="categorylistbox">
 
-            <!-- products generate dynamically -->
-            
-          </div>
-        </div>
+                    <!-- products generate dynamically -->
+                    
+                </div>
 
-        <div class="productpagemainarea">
+            </div>
 
-            <div class="filterandsortconditionarea">
-              <div>
-                  <span id="filtercondtionname" class="filtercondtionname">All products</span>
-                  <button class="clearfilterbtn" onclick="clearfilterproducts()">Clear Filter</button>
-              </div> 
+            <div class="productpagemainarea">
 
-              <div>
-                  <div class="custom-dropdown">
-                    <div class="selected-option">
-                      <span id="sortingoptiontextarea">Recommended</span>
-                      <img src="images/downarrow-black.png">
+                <div class="filterandsortconditionarea">
+                    
+                    <span id="filtercondtionname" class="filtercondtionname">All products</span>
+                
+                    
+
+
+                    <div class="custom-dropdown">
+                        <div class="selected-option">
+                            <span id="sortingoptiontextarea">Recommended</span>
+                            <img src="images/downarrow-black.png">
+                        </div>
+                        <ul class="dropdown-options">
+                            <li value="Recommended">Recommended</li>
+                            <li value="Price - Low to High">Price - Low to High</li>
+                            <li value="Price - High to Low">Price - High to Low</li>
+                            <li value="Offer - Low to High">Offer - Low to High</li>
+                            <li value="Offer - High to Low">Offer - High to Low</li>
+                        </ul>
+                
                     </div>
-                    <ul class="dropdown-options">
-                      <li value="Recommended">Recommended</li>
-                      <li value="Price - Low to High">Price - Low to High</li>
-                      <li value="Price - High to Low">Price - High to Low</li>
-                      <li value="Offer - Low to High">Offer - Low to High</li>
-                      <li value="Offer - High to Low">Offer - High to Low</li>
-                    </ul>
-                  
-                  </div>
-              </div>
 
+
+                    <button class="clearfilterbtn" onclick="clearfilterproducts()">Clear Filter</button>
+                    
+
+                        
+                    
+
+                
+
+                </div>
+                
+                <div class="individualproductdisplayarea" id="individualproductdisplayarea">
+
+                    <!-- all products are generated dynamically here based on filter and sorting-->
+
+                </div>
+                
+                
             </div>
-            
-            <div class="individualproductdisplayarea" id="individualproductdisplayarea">
 
-                <!-- all products are generated dynamically here based on filter and sorting-->
-
-            </div>
-            
-            
         </div>
-
-      </div>
-       
-
-
-        
-
         
     </main>
 

@@ -210,7 +210,7 @@
   
 
   // Sample data
-  const cartItems = JSON.parse(localStorage.getItem("cartitems")) 
+  const cartItems = JSON.parse(sessionStorage.getItem("purchaseitemdetails")) 
 
 
   const userInfoskipRaw = sessionStorage.getItem("e_com-shipaddress");
@@ -315,7 +315,7 @@ const estimateddeliverytime =
   
 
   function continueShopping(){
-    localStorage.removeItem("cartitems");
+    sessionStorage.removeItem("purchaseitemdetails");
     sessionStorage.removeItem("e_com-shipaddress");
     sessionStorage.removeItem("paymentcarddetail");
     window.location.href = "home.html"

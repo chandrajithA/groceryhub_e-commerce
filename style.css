@@ -791,8 +791,7 @@
          border-radius: 15px;
          box-shadow: 3px 3px 20px rgba(0,0,0,0.1);
          padding: 10px;
-         width: 280px;
-         height: auto;
+         width: 300px;
          display: flex;
          flex-direction: column;
          gap: 10px;
@@ -845,6 +844,8 @@
 
 
 
+
+
 /*********************************************   sorting and products display area - products page   *************************************/
 
 
@@ -855,8 +856,9 @@
       font-weight: 700;
       font-size: larger;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
       
     }
 
@@ -876,10 +878,11 @@
     
 
     .custom-dropdown {
-        
+
         user-select: none;
         font-weight: 300;
         font-size: 14px;
+        
         
       }
 
@@ -895,7 +898,7 @@
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
         height: 35px;
-        width: 200px;
+        /* width: 200px; */
       }
 
 
@@ -904,7 +907,7 @@
         display: none;
         position: absolute;
         border: 1px solid #ccc ;
-        width: 100%;
+        
         background: white;
         z-index: 100;
         transition: opacity 0.3s ease;

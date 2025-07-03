@@ -18,6 +18,7 @@
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
     }
     h2 {
       margin-top: 0;
@@ -51,7 +52,7 @@
     }
     .total {
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 20px;
     }
     label {
       display: block;
@@ -66,7 +67,7 @@
     }
     .error {
       color: red;
-      font-size: 0.85em;
+      font-size: 12px;
     }
     button {
       margin-top: 20px;
@@ -227,11 +228,13 @@
 
 <script src="websitescript.js"></script>
 <script>
+
+  const cartProducts = JSON.parse(localStorage.getItem("cartitems"));
   
     function loadpaymentpage(){
 
       // ✅ Dummy cart products
-  const cartProducts = JSON.parse(localStorage.getItem("cartitems"));
+  
 
   // ✅ Display user info from localStorage
   const userInfoskipRaw = sessionStorage.getItem("e_com-shipaddress");
@@ -337,7 +340,8 @@
       sessionStorage.setItem("paymentcarddetail",cardNumber);
       alert("✅ Payment successful! Order confirmed.");
       this.reset();
-      // localStorage.removeItem("cartItems"); // Optional clear
+      sessionStorage.setItem("purchaseitemdetails",JSON.stringify(cartProducts));
+      localStorage.removeItem("cartitems"); 
       window.location.href = "order-summary.html"
     }
   });
@@ -401,8 +405,8 @@
                 });
 
 
-  loadpaymentpage();
-  updatecartcount();
+            loadpaymentpage();
+            updatecartcount();
             updatewishlistcount();
             updateloginstatus();
             
