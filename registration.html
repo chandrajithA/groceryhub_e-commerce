@@ -180,6 +180,16 @@
     </footer>
 <script src="websitescript.js"></script>
 <script>
+
+
+  window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+
   document.getElementById("checkoutForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
