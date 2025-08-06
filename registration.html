@@ -205,7 +205,6 @@
     const city = document.getElementById("city").value.trim();
     const pincode = document.getElementById("pincode").value.trim();
     const password = document.getElementById("password").value.trim();
-    // const card = document.getElementById("card").value.trim();
 
     if (name === "") {
       isValid = false;
@@ -241,11 +240,6 @@
       isValid = false;
       document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
     }
-
-    // if (!/^\d{16}$/.test(card)) {
-    //   isValid = false;
-    //   document.getElementById("cardError").textContent = "Card number must be 16 digits.";
-    // }
 
     if (isValid) {
         let userdetail = {"username":name,"useremail":email,"userphone":phone,"useraddress":address,"usercity":city,"userpincode":pincode,"userpassword":password}
